@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise4</title>
+</head>
+<body>
+	<p id="show" style="border: 1px solid red">Sir Isaac Newton PRS was an English mathematician, astronomer, and physicist (described in his own day as a "natural philosopher") who is widely recognised as one of the most influential scientists of all time and a key figure in the scientific revolution. His book Philosophiæ Naturalis Principia Mathematica ("Mathematical Principles of Natural Philosophy"), first published in 1687, laid the foundations of classical mechanics. Newton also made pathbreaking contributions to optics, and he shares credit with Gottfried Wilhelm Leibniz for developing the infinitesimal calculus.</p>
+	<label for="br_red">Border Red Value(0-255)</label>
+	<input id="br_red" type="number" min="0" max="255"><br />
+	<label for="br_green">Border Green Value(0-255)</label>
+	<input id="br_green" type="number" min="0" max="255"><br />
+	<label for="br_blue">Border Blue Value(0-255)</label>
+	<input id="br_blue" type="number" min="0" max="255"><br />
+	<label for="br_width">Border Width Value(0-100)</label>
+	<input id="br_width" type="number" min="0" max="100"><br />
+
+	<label for="bg_red">Background Red Value(0-255)</label>
+	<input id="bg_red" type="number" min="0" max="255"><br />
+	<label for="bg_green">Background Green Value(0-255)</label>
+	<input id="bg_green" type="number" min="0" max="255"><br />
+	<label for="bg_blue">Background Blue Value(0-255)</label>
+	<input id="bg_blue" type="number" min="0" max="255"><br />
+	<button onclick="change()">Go!</button>
+
+	<script>
+		var p = document.getElementById('show');
+		var br_red = document.getElementById('br_red');
+		var br_green = document.getElementById('br_green');
+		var br_blue = document.getElementById('br_blue');
+		var br_width = document.getElementById('br_width');
+		var bg_red = document.getElementById('bg_red');
+		var bg_green = document.getElementById('bg_green');
+		var bg_blue = document.getElementById('bg_blue');
+
+		function change() {
+			if (br_red.value && br_green.value && br_blue.value) {
+				p.style.borderColor = 'rgb(' + br_red.value + ',' + br_green.value + ',' + br_blue.value + ')';
+			}
+			if (br_width.value) {
+				p.style.borderWidth = br_width.value + 'px';
+			}
+			if (bg_red.value && bg_green.value && bg_blue.value) {
+				p.style.backgroundColor = 'rgb(' + bg_red.value + ',' + bg_green.value + ',' + bg_blue.value + ')';
+			}
+		}
+	</script>
+</body>
+</html>

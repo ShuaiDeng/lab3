@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise2</title>
+</head>
+<body>
+	<img id="slideShow" src="./img/slide0.png" alt="showpic" width="200" height="200">
+	<button onclick="previous()">previous</button>
+	<button onclick="next()">next</button>
+
+	<script>
+		var image = document.querySelector('#slideShow');
+		var now = 0, total = 5;
+		function previous() {
+			if (now === 0) {
+				now = total-1;
+			} else {
+				now--;
+			}
+			image.src = './img/slide' + now + '.png';
+		}
+		function next() {
+			if (now === total-1) {
+				now = 0;
+			} else {
+				now++;
+			}
+			image.src = './img/slide' + now + '.png';
+		}
+	</script>
+</body>
+</html>

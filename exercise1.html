@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise1</title>
+</head>
+<body>
+	<label for="psw">Please input the password</label>
+	<input id="psw" type="password"><br />
+	<label for="repsw">Please repeate the password</label>
+	<input id="repsw" type="password"><br />
+	<button onclick="validate()">Validate</button>
+
+	<script>
+		function validate() {
+			var psw = document.querySelector('#psw').value;
+			var repsw = document.querySelector('#repsw').value;
+			if (psw.length < 8 || repsw.length < 8) {
+				alert('the passwords are not at least 8 characters long');
+			}
+			if (psw !== repsw) {
+				alert("the passwords entered don't match");
+			}
+		}
+	</script>
+</body>
+</html>
